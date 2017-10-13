@@ -1,0 +1,69 @@
+{
+	'location' : 'wonderla amusement park',
+	'map_width' : '300',
+	'map_length' : '400' ,
+	'map_zoom' : '17'  ,
+	'sub_locations' : 
+	{
+		"Recoil roller coaster" : 
+		{
+			"ID" : "001" , 
+			"Coordinates" : [160, 370, 20, 20]
+		} , 
+		"equinox" : 
+		{
+			"ID" : "002" , 
+			"Coordinates" : [210, 300, 20, 20]
+		},
+		"maveric ride" :
+		{
+			"ID" : "003" , 
+			"Coordinates" : [190, 260, 20, 20]
+		},
+		"dungeon ride" :
+		{
+			"ID" : "004" , 
+			"Coordinates" : [260, 130, 20, 20]
+		},
+		"musical fountain" :
+		{
+			"ID" : "005" , 
+			"Coordinates" : [210, 170, 20, 20]
+		},
+		"maveric ride" :
+		{
+			"ID" : "006" , 
+			"Coordinates" : [160, 370, 20, 20]
+		},
+		"XD Max" :
+		{
+			"ID" : "007" , 
+			"Coordinates" : [160, 370, 20, 20]
+		},
+		"Court Yard" :
+		{
+			"ID" : "008" , 
+			"Coordinates" : [140, 290, 20, 20]
+		},
+		"toilet" :
+		{
+			"ID" : "009" , 
+			"Coordinates" : [50, 230, 20, 20]
+		},
+		"pizza corner" :
+		{
+			"ID" : "010" , 
+			"Coordinates" : [100, 180, 20, 20]
+		},
+		"axis bank" :
+		{
+			"ID" : "011" , 
+			"Coordinates" : [150, 150, 20, 20]
+		},
+		"park view" :
+		{
+			"ID" : "012" , 
+			"Coordinates" : [100, 180, 20, 20]
+		}
+	}
+}
