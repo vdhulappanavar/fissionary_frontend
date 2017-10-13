@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  
+  <head>  
     <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script>  
+		//var config_json;
 		function init()
 		{
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET" , "test.txt" , true) ;
+			xhr.open("GET" , "config.json" , true) ;
 			xhr.onreadystatechange = function(){
 				if(this.status == 200 && this.readyState==4)
 				{
-					console.log(xhr.responseText);
+					//console.log(xhr.responseText);
+					//console.log(typeof xhr.responseText);
+					//var a = '{"a":"b" , "c" : "d"}';
+					//console.log(typeof a);
+					//console.log(JSON.parse(a));
+					//console.log(JSON.parse(xhr.responseText));
+					//config_json = JSON.parse(xhr.responseText);
+					handle_geolocation_query(JSON.parse(xhr.responseText));
 				}
 			};
 			xhr.send();
 			
 		}
-        function handle_geolocation_query()
+        function handle_geolocation_query(config_json)
         {
 			console.log("inside handle_geolocation_query");            
-			var address = 'wonderla amusement park';
+			var address = config_json['location'];
 			var lat =0;
 			var lng = 0;
             geocoder = new google.maps.Geocoder();
@@ -32,7 +39,7 @@
 				lng = results[0].geometry.location.lng();
 				console.log("inside function " + lat + "::"+lng);
 				var google_tile = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + lat + "," +
-                            lng + "&zoom=17&size=300x400";
+                            lng + "&zoom="+config_json["map_zoom"]+"&size="+config_json["map_width"]+"x"+config_json["map_height"]+"&key=AIzaSyA-VJUjVQXtTxo3i5x_JpCRbzAU7UWonGI";
             var canvas = document.getElementById("myCanvas");
             var context = canvas.getContext("2d");   
              imageObj = new Image();
